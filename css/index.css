@@ -1,0 +1,141 @@
+body {
+  background: linear-gradient(135deg, #1e3c72, #2a5298); /* أزرق غامق أنيق */
+  font-family: "Poppins", sans-serif;
+  color: #f1f5f9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.navbar {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #e0e7ff !important;
+}
+.nav-link {
+  color: #cbd5e1 !important;
+  margin-left: 15px;
+  transition: 0.3s;
+}
+.nav-link:hover {
+  color: #90cdf4 !important; /* أزرق فاتح رايق */
+}
+.search-bar input {
+  border-radius: 50px;
+  padding: 14px 20px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+.search-bar input::placeholder {
+  color: #cbd5e1;
+}
+.search-bar button {
+  border-radius: 50px;
+  padding: 12px 25px;
+  background: #38bdf8; /* أزرق سماوي ناعم */
+  border: none;
+  color: #0f172a;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.search-bar button:hover {
+  background: #0ea5e9;
+  color: #fff;
+}
+.weather-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+  color: #f1f5f9;
+  transition: all 0.3s ease-in-out;
+}
+.weather-card:hover {
+  transform: translateY(-6px);
+}
+.temp {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #38bdf8; /* أزرق فاتح كـ Highlight */
+}
+.weather-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #90cdf4;
+}
+h4 {
+  font-weight: 600;
+  color: #e2e8f0;
+}
+footer {
+  background: rgba(255, 255, 255, 0.05);
+  text-align: center;
+  padding: 15px;
+  margin-top: auto;
+  font-size: 14px;
+  color: #cbd5e1;
+}
+.hourly-forecast::-webkit-scrollbar {
+  height: 8px;
+}
+
+.hourly-forecast::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.hourly-forecast::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.hour-card img {
+  width: 50px;
+  height: 50px;
+}
+
+.hour-card .temp {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 4px solid #fff;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  -webkit-animation: rotation 1s linear infinite;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border-left: 4px solid #ff3d00;
+  border-bottom: 4px solid transparent;
+  animation: rotation 0.5s linear infinite reverse;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
