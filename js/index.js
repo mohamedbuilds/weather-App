@@ -96,6 +96,7 @@ if (navigator.geolocation) {
 }
 // Search WeatherApp
 async function getSearchWeather() {
+   message.classList.add("d-none");
   try {
     let word = serches.value.trim();
     if (!word) return;
